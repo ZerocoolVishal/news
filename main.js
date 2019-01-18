@@ -100,7 +100,7 @@ function setDate() {
 function getTemperature(cityName = city) {
     city = cityName;
     $.get(weatherBaseUrl + 'current.json', { key: weatherApiKey, q: cityName }, (res) => {
-        $('#temp').text(res.current.temp_c + " °C");
+        $("#temp").text(res.current.temp_c + " °C");
         $("#msg").text(`${res.location.country}, ${res.location.region}, ${res.location.name}`);
         $("#condition").text(res.current.condition.text);
         $('#weather-icon').attr("src", "http:" + res.current.condition.icon);
@@ -122,11 +122,11 @@ function displayCategory(categoryName = category) {
             symbols: res.currencies[0].code
           },
           (data) => {
-            $('#donate').text(`Conversion Rate : ${res.currencies[0].symbol} ${data.rates[res.currencies[0].code]} (${data.base} vs ${res.currencies[0].code})`);
+              $('#currency').text(`Conversion Rate : ${res.currencies[0].symbol} ${data.rates[res.currencies[0].code].toFixed(3)} (${data.base} vs ${res.currencies[0].code})`);
           }
         )
         .fail(() => {
-            $("#donate").text("");
+            $("#currency").text("");
         });
     })
 
