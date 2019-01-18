@@ -6,13 +6,13 @@ const apiKey = '62247117f01649aea8bf7b6e1a04f4d9';
 const baseUrl = "https://newsapi.org/v2/";
 
 const weatherApiKey = "bde2ff81c9664840b15121909191801";
-const weatherBaseUrl = "http://api.apixu.com/v1/";
+const weatherBaseUrl = "https://api.apixu.com/v1/";
 
 const countryApiUrl = 'https://restcountries.eu/rest/v2/';
 
 const holidayApiKey = '71099430-1835-4185-aced-bfbd78c1b9bd';
 
-const geopluginApiBaseUrl = "http://www.geoplugin.net/";
+const geopluginApiBaseUrl = "https://www.geoplugin.net/";
 
 var country = "";
 var category = "general";
