@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Zerocool News - Business, Entertainment, Health, Science, Sports & Technology</title>
+</head>
+<body>
+    <div class="container mt-3 mb-3">
+ 
+        <div class="text-center mb-3 mt-3">
+            <h1 >𝖅𝖊𝖗𝖔𝖈𝖔𝖔𝖑 𝕹𝖊𝖜𝖘 <span id="nativeName"></span></h1>
+        </div>
+
+        <hr>
+
+        <div class="jumbotron jumbotron-fluid mt-3 bg-light p-0">
+            <div class="row">
+                <div class="col-md-3">
+                    <select class="form-control" id="countries">
+                    </select>
+                    <img class="mt-3" src="#" width="100%" id="flag" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center h-100" style="background: #f3f3f3;">
+                        <h1 class="pt-5" id="date"></h1>
+                        <span id="donate"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="City" name="city-name" id="city-name" class="form-control mb-2">
+                    <h2 id='condition'>Condition</h2>
+                    <img style="text-align:left;float:left;" alt="" id="weather-icon">
+                    <h1 class="display-4" id="temp">Temp</h1>
+                    <p class="lead" id="msg">City</p>
+                </div>
+            </div>
+        </div>
+
+        <input type="text" placeholder="Search" name="query" id="query" class="form-control mt-3 mb-3">
+
+        <ul class="nav nav-tabs" style="cursor: pointer;" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active"  data-toggle="tab" onclick="displayCategory('general')" role="tab" >General</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('business')" role="tab" >Business</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('entertainment')" role="tab" >Entertainment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('health')" role="tab" >Health</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('science')" role="tab" >Science</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('sports')" role="tab" >Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" onclick="displayCategory('technology')" role="tab">Technology</a>
+            </li>
+        </ul>
+
+        <div class="mt-3" id="news-feed">
+        </div>
+    </div>
+
+    <footer class="footer p-5">
+        <div class="container text-right">
+            <span class="text-muted">~ Vishal Bhosle</span>
+        </div>
+    </footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
