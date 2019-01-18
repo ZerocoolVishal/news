@@ -33,7 +33,7 @@ $(document).ready(() => {
         displayCategory();
 
     });
-    if (success == 1) {
+    if (success == 0) {
 
         city = 'new delhi';
         country = 'IN';
