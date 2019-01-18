@@ -12,7 +12,7 @@ const countryApiUrl = 'https://restcountries.eu/rest/v2/';
 
 const holidayApiKey = '71099430-1835-4185-aced-bfbd78c1b9bd';
 
-const geopluginApiBaseUrl = "https://www.geoplugin.net/";
+const geopluginApiBaseUrl = "http://www.geoplugin.net/";
 
 var country = "";
 var category = "general";
@@ -20,23 +20,23 @@ var city = "";
 
 $(document).ready(() => {
 
-    let success = false;
+    let success = 0;
 
     $.getJSON(geopluginApiBaseUrl + 'json.gp?jsoncallback=?', function (data) {
 
         //console.log(data);
         city = data.geoplugin_city;
         country = data.geoplugin_countryCode;
-        success = true;
+        success = 1;
         getCountries();
         getTemperature();
         displayCategory();
 
     });
-    if (!success) {
+    if (success == 1) {
 
         city = 'new delhi';
-        country = 'in';
+        country = 'IN';
 
         getCountries();
         getTemperature();
