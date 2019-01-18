@@ -20,20 +20,30 @@ var city = "";
 
 $(document).ready(() => {
 
+    let success = false;
+
     $.getJSON(geopluginApiBaseUrl + 'json.gp?jsoncallback=?', function (data) {
 
         //console.log(data);
         city = data.geoplugin_city;
         country = data.geoplugin_countryCode;
-
+        success = true;
         getCountries();
-
         getTemperature();
-
         displayCategory();
 
-        setDate();
     });
+    if (!success) {
+
+        city = 'new delhi';
+        country = 'in';
+
+        getCountries();
+        getTemperature();
+        displayCategory();
+    }
+
+    setDate();
 
     $("#city-name").keyup(function () {
         let city = $("#city-name").val();
