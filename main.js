@@ -151,6 +151,7 @@ function card(article) {
     return `<div class="card mt-4" style="border-radius: 1rem; cursor:pointer" onclick="window.open('${article.url}')">
             <div class="row">
                 <div class="col-sm-8">
+                    <img class="card-img-top d-md-none d-xs-block" style="border-radius: 1rem 1rem 0rem 0rem; max-height: 16rem;" src="${article.urlToImage}" alt="">
                     <div class="card-body">
                         <h5 class="card-title">${article.title}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">${article.author ? article.author : "Anonymous author"} @
