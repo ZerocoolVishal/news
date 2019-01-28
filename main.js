@@ -90,7 +90,7 @@ $(document).ready(() => {
 })
 
 function getLocationAndAddress() {
-    if((navigator.geolocation) {
+    if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);  
     }
 }
