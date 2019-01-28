@@ -99,7 +99,7 @@ function showPosition(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
     $.get(googleMaps, { key: googleMapsKey,  latlng: lat + ',' + lon}, (res) => {
-        alert(res.results[0].formatted_address);
+        //alert(res.results[0].formatted_address);
         getTemperature(res.results[0].formatted_address);
         $('#address').text(res.results[0].formatted_address);
     })
