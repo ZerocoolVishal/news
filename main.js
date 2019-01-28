@@ -26,6 +26,8 @@ $(document).ready(() => {
 
     let success = 0;
 
+    getLocationAndAddress();
+    
     $.getJSON(geopluginApiBaseUrl + 'json.gp?jsoncallback=?', function (data) {
 
         //console.log(data);
