@@ -14,6 +14,10 @@ const holidayApiKey = '71099430-1835-4185-aced-bfbd78c1b9bd';
 
 const geopluginApiBaseUrl = "http://www.geoplugin.net/";
 
+//https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBtiHj-_QDVOV0H8eexU-7W-p2AqTzq_N0&latlng=19.199935,73.17955549999999&sensor=true
+const googleMaps = "https://maps.googleapis.com/maps/api/geocode/json?latlng=19.199935,73.17955549999999&sensor=true";
+const googleMapsKey = 'AIzaSyBtiHj-_QDVOV0H8eexU-7W-p2AqTzq_N0';
+
 var country = "";
 var category = "general";
 var city = "";
@@ -82,6 +86,20 @@ $(document).ready(() => {
     });
 
 })
+
+function getLocationAndAddress() {
+    if((navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);  
+    }
+}
+
+function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    $.get(googleMaps, { key: googleMapsKey,  latlng: lat + ',' + lon}, (res) => {
+        alert(JSON.stringify(res));
+    })
+}
 
 function getCountries() {
     $.get(countryApiUrl + 'all', (res) => {
